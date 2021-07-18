@@ -14,13 +14,15 @@ namespace WorldCities.Data
         ///Private contructor called  by the creater async method
         /// </summary>
         private ApiResult(List<T> data, int count, int pageIndex, int pageSize,
-                          string sortColumn, string sortOrder)
+                          string sortColumn, string sortOrder, string filterColumn, string filterQuery)
         {
             Data = data;
             PageIndex = pageIndex;
             PageSize = pageSize;
             SortColumn = sortColumn;
             SortOrder = sortOrder;
+            FilterColumn = filterColumn;
+            FilterQuery = filterQuery;
             TotalCount = count;
             TotalPages = (int)Math.Ceiling(count / (double)pageSize);
 
@@ -33,9 +35,17 @@ namespace WorldCities.Data
         /// <param name="pageSize">actual size of each page</param>
         /// <param name="sortColumn">Column selected to sort by /param>
         /// <param name="sortOrder">Column sorting order </param>
+        /// <param name="filterColumn">filtering column name </param>
+        /// <param name="filterQuery"> filtering query value to look up </param>
         /// <returns>an object cointaining the page results  and all the revelant paging nav info </returns>
-        public static async Task<ApiResult<T>> CreateAsync(IQueryable<T> source, int pageIndex, int pageSize, string sortColumn = null, string sortOrder = null) {
+        public static async Task<ApiResult<T>> CreateAsync(IQueryable<T> source, int pageIndex, int pageSize, string sortColumn = null,
+                       string sortOrder = null, string filterColumn =null , string filterQuery = null)
+        {
 
+            if (!string.IsNullOrEmpty(filterColumn) && !string.IsNullOrEmpty(filterQuery) && IsValidProperty(filterColumn)) {
+                source = source.Where(string.Format("{0}.Contains(@0)", filterColumn), filterQuery);
+            }
+            
             var count = await source.CountAsync();
 
             if (!string.IsNullOrEmpty(sortColumn) && IsValidProperty(sortColumn)) {
@@ -49,7 +59,7 @@ namespace WorldCities.Data
 
             var data = await source.ToListAsync();
 
-            return new ApiResult<T>(data, count, pageIndex, pageSize,  sortColumn,  sortOrder);
+            return new ApiResult<T>(data, count, pageIndex, pageSize,  sortColumn,  sortOrder, filterColumn, filterQuery);
 
         }
 
@@ -94,6 +104,14 @@ namespace WorldCities.Data
         /// Sort order selected( asc or desc or null if none is selected
         /// </summary>
         public string SortOrder { get;  set; }
+        /// <summary>
+        /// filter column name or null if nine 
+        /// </summary>
+        public string FilterColumn { get; set; }
+        /// <summary>
+        /// filter query string to be used with in the given filter columns 
+        /// </summary>
+        public string FilterQuery { get; set; }
         /// <summary>
         /// returns true if the current page has previous page otherwise False
         /// </summary>

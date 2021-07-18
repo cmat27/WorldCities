@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{E25AB046-A562-4833-9D0C-7A7741DAFD28}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClientApp/src/app/cities/cities.component.css">
+    <Files>
+      <File FileName="ClientApp/src/app/angular-material.module.ts" Line="7" Column="48" />
+      <File FileName="ClientApp/src/app/cities/cities.component.ts" Line="14" Column="49" />
+      <File FileName="ClientApp/src/app/cities/cities.component.html" Line="12" Column="20" />
+      <File FileName="ClientApp/src/app/app.module.ts" Line="26" Column="22" />
+      <File FileName="ClientApp/src/app/cities/cities.component.css" Line="5" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WorldCities" expanded="True">
+            <Node name="WorldCities" expanded="True">
+              <Node name="ClientApp" expanded="True">
+                <Node name="src" expanded="True">
+                  <Node name="app" expanded="True">
+                    <Node name="cities" expanded="True">
+                      <Node name="cities.component.css" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WorldCities PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

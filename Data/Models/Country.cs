@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace WorldCities.Data.Models
 {
@@ -26,10 +27,12 @@ namespace WorldCities.Data.Models
         ///<summary>
         ///Country Name (in ISO 3166-1 ALPHA-2 format)
         /// </summary>
+        [JsonPropertyName("iso2")]
         public string ISO2 { get; set; }
         ///<summary>
         ///Country Name (in ISO 3166-1 ALPHA-3 format)
         /// </summary>
+        [JsonPropertyName("iso3")]
         public string ISO3 { get; set; }
         ///<summary>
         /// A list of cities related to this country 

@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{E25AB046-A562-4833-9D0C-7A7741DAFD28}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ClientApp/src/app/cities/cities.component.ts">
     <Files>
-      <File FileName="Controllers/CountriesController.cs" Line="21" Column="32" />
-      <File FileName="ClientApp/src/app/countries/countries.component.ts" Line="36" Column="47" />
-      <File FileName="ClientApp/src/app/countries/countries.component.html" Line="10" Column="19" />
-      <File FileName="ClientApp/src/app/countries/countries.component.css" Line="7" Column="15" />
-      <File FileName="appsettings.json" Line="16" Column="2" />
-      <File FileName="Data/ApiResult.cs" Line="32" Column="23" NotebookId="1" />
-      <File FileName="ClientApp/src/app/cities/cities.component.html" Line="12" Column="37" NotebookId="1" />
-      <File FileName="ClientApp/src/app/cities/cities.component.ts" Line="23" Column="43" NotebookId="1" />
+      <File FileName="Controllers/CountriesController.cs" />
+      <File FileName="ClientApp/src/app/countries/countries.component.ts" />
+      <File FileName="ClientApp/src/app/countries/countries.component.html" />
+      <File FileName="ClientApp/src/app/countries/countries.component.css" />
+      <File FileName="appsettings.json" />
+      <File FileName="Data/ApiResult.cs" NotebookId="1" />
+      <File FileName="ClientApp/src/app/cities/cities.component.html" NotebookId="1" />
+      <File FileName="ClientApp/src/app/cities/cities.component.ts" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="WorldCities" expanded="True">
+          <Node name="WorldCities" expanded="True" selected="True">
             <Node name="WorldCities" expanded="True">
               <Node name="ClientApp" expanded="True">
                 <Node name="src" expanded="True">
@@ -26,7 +26,6 @@
               <Node name="Data" expanded="True">
                 <Node name="Models" expanded="True" />
               </Node>
-              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>

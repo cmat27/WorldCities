@@ -68,3 +68,4 @@
 /Users/cmat/Desktop/GitHub/WorldCities/obj/Debug/net5.0/ref/WorldCities.dll
 /Users/cmat/Desktop/GitHub/WorldCities/obj/Debug/net5.0/WorldCities.pdb
 /Users/cmat/Desktop/GitHub/WorldCities/obj/Debug/net5.0/WorldCities.genruntimeconfig.cache
+/Users/cmat/Desktop/GitHub/WorldCities/obj/Debug/net5.0/WorldCities.csproj.AssemblyReference.cache
